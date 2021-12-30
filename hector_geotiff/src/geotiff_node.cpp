@@ -135,7 +135,7 @@ public:
     nav_msgs::GetMap srv_map;
     if (map_service_client_.call(srv_map))
     {
-      ROS_INFO("GeotiffNode: Map service called successfully");
+      // ROS_INFO("GeotiffNode: Map service called successfully");
       const nav_msgs::OccupancyGrid& map (srv_map.response.map);
 
       std::string map_file_name = p_map_file_base_name_;
@@ -249,7 +249,7 @@ public:
 
     ros::Duration elapsed_time (ros::Time::now() - start_time);
 
-    ROS_INFO("GeoTiff created in %f seconds", elapsed_time.toSec());
+    //ROS_INFO("GeoTiff created in %f seconds", elapsed_time.toSec());
   }
 
   void timerSaveGeotiffCallback(const ros::TimerEvent& e)

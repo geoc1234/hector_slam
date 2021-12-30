@@ -509,7 +509,7 @@ void GeotiffWriter::writeGeotiffImage()
   if(!success){
     ROS_INFO("Writing image with file %s failed with error %s", complete_file_string.c_str(), imageWriter.errorString().toStdString().c_str());
   }else{
-    ROS_INFO("Successfully wrote geotiff to %s", complete_file_string.c_str());
+    //ROS_INFO("Successfully wrote geotiff to %s", complete_file_string.c_str());
   }
 }
 

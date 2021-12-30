@@ -70,7 +70,7 @@ class MapGenerator
       geotiff_writer.writeGeotiffImage();
 
       ros::Duration elapsed_time (ros::Time::now() - start_time);
-      ROS_INFO("GeoTiff created in %f seconds", elapsed_time.toSec());
+      //ROS_INFO("GeoTiff created in %f seconds", elapsed_time.toSec());
     }
 
     GeotiffWriter geotiff_writer;

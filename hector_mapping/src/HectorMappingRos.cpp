@@ -306,7 +306,7 @@ void HectorMappingRos::scanCallback(const sensor_msgs::LaserScan& scan)
   if (p_timing_output_)
   {
     ros::WallDuration duration = ros::WallTime::now() - startTime;
-    ROS_INFO("HectorSLAM Iter took: %f milliseconds", duration.toSec()*1000.0f );
+    //ROS_INFO("HectorSLAM Iter took: %f milliseconds", duration.toSec()*1000.0f );
   }
 
   //If we're just building a map with known poses, we're finished now. Code below this point publishes the localization results.
@@ -367,7 +367,7 @@ void HectorMappingRos::sysMsgCallback(const std_msgs::String& string)
 bool HectorMappingRos::mapCallback(nav_msgs::GetMap::Request  &req,
                                    nav_msgs::GetMap::Response &res)
 {
-  ROS_INFO("HectorSM Map service called");
+  //ROS_INFO("HectorSM Map service called");
   res = mapPubContainer[0].map_;
   return true;
 }
